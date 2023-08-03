@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "app:setup": "pnpm install && npx husky install",
     "dev": "next dev",
+    "lint": "next lint",
+    "test": "ls",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "next": "13.4.12",
@@ -20,7 +22,11 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "postcss": "8.4.27",
+    "prettier": "^3.0.1",
+    "prettier-plugin-tailwindcss": "^0.4.1",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
   }
