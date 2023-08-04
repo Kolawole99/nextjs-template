@@ -26,7 +26,7 @@ module.exports = {
     },
   },
 
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint', 'prettier', 'simple-import-sort'],
 
   extends: [
     'next/core-web-vitals',
@@ -70,5 +70,7 @@ module.exports = {
     ],
     'no-nested-ternary': 'off',
     'import/prefer-default-export': 'off',
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
   },
 };
