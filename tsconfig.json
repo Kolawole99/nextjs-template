@@ -27,7 +27,15 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "types": [
+      "cypress",
+      "node"
+    ],
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./src/types/global.d.ts"
+    ]
   },
   "include": [
     "next-env.d.ts",

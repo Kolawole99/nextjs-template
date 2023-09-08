@@ -35,3 +35,35 @@
 //     }
 //   }
 // }
+
+Cypress.Commands.add('getDataTestId', dataTestSelector => {
+  cy.get(`[data-testId="${dataTestSelector}"]`);
+});
+
+Cypress.Commands.add('login', ({ username = Cypress.env('username'), password = Cypress.env('password') } = {}) => {
+  cy.session([username, password], () => {
+    cy.visit('/login');
+    cy.get('[data-cy=legacy-auth-login-button]').click();
+    if (!(Cypress.env('mode') === 'dev')) {
+      cy.origin(
+        Cypress.env('auth_url'),
+        {
+          args: {
+            usr: username,
+            pwd: password,
+          },
+        },
+        ({ usr, pwd }) => {
+          cy.get('#username').type(usr);
+          cy.get('#password').type(pwd);
+          cy.get('button').click();
+        }
+      );
+    } else {
+      cy.get('#username').type(Cypress.env('username'));
+      cy.get('#password').type(Cypress.env('password'));
+      cy.get('button').click();
+    }
+    cy.location('pathname').should('eq', '/dashboard');
+  });
+});

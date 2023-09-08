@@ -72,5 +72,20 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: ['**/*.test.ts', '**/*.test.tsx', 'cypress.config.ts'],
+      },
+    ],
   },
+
+  overrides: [
+    {
+      files: ['*.tsx', '*.ts'],
+      rules: {
+        'no-undef': 'off',
+      },
+    },
+  ],
 };
