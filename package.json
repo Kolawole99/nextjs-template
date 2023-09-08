@@ -1,5 +1,6 @@
 {
-  "name": "content-garden",
+  "name": "nextjs-template",
+  "description": "This is a base template setup that I follow in setting up a Next.js & Tailwindcss project",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +9,7 @@
     "lint": "next lint",
     "test": "npx jest --passWithNoTests",
     "test:watch": "npx jest --watch --passWithNoTests",
+    "cypress:open": "npx cypress open",
     "build": "next build",
     "start": "next start"
   },
@@ -27,6 +29,7 @@
     "@types/react-dom": "18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.2.1",
     "autoprefixer": "10.4.14",
+    "cypress": "^13.1.0",
     "eslint": "8.46.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "13.4.12",
