@@ -1,1 +1,1 @@
-pnpm run lint && pnpm lint-staged
+pnpm run lint && pnpm dlx lint-staged
