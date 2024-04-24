@@ -2,13 +2,13 @@ import './globals.css';
 
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import React from 'react';
+import type React from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Content Garden',
-  description: 'My Beautiful Content Garden',
+  title: 'Next.js Template',
+  description: 'My Beautiful Template',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
